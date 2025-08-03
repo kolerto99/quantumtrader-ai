@@ -215,10 +215,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: [GitHub Issues](https://github.com/kolerto99/quantumtrader-ai/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/kolerto99/quantumtrader-ai/discussions)
 - **Developer**: [@kolerto99](https://github.com/kolerto99)
+- **Twitter**: [@Iuvnriki](https://x.com/Iuvnriki)
 
 ---
 
 **⭐ Star this repository if you find it useful!**
 
-**🚀 Built with ❤️ by [@kolerto99](https://github.com/kolerto99)**
+**🚀 Built with ❤️ by [@kolerto99](https://github.com/kolerto99) | Follow on Twitter: [@Iuvnriki](https://x.com/Iuvnriki)**
 
