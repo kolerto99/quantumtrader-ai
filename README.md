@@ -2,6 +2,8 @@
 
 🚀 **Advanced AI-powered trading terminal with real-time market data and multi-AI analysis**
 
+![Main Interface](screenshots/main_interface_working.png)
+
 ## ✨ Features
 
 ### 📊 **Live Market Data**
@@ -10,7 +12,7 @@
 - **Technical indicators** (RSI, Volume, Price changes)
 - **Market status tracking** (Open/Closed)
 
-![Live Market Data](screenshots/quantumtrader_live_data.png)
+![Live Market Data](screenshots/live_market_data_working.png)
 
 ### 💼 **Portfolio Management**
 - **Human Portfolio** - Manual trading interface
@@ -29,8 +31,6 @@
 - **Real-time updates** with smooth animations
 - **Dark theme** with cyberpunk aesthetics
 - **Interactive trading forms**
-
-![Main Interface](screenshots/quantumtrader_main_interface.png)
 
 ## 🚀 Quick Start
 
