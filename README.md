@@ -1,225 +1,261 @@
-# 🚀 QuantumTrader AI
+# QuantumTrader AI - Universal Multi-AI Trading Platform
 
-**Universal Multi-AI Trading Platform | Real-time Market Analysis**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-brightgreen.svg)](https://github.com/kolerto99/quantumtrader-ai)
-
-> **Revolutionary AI-powered trading terminal that combines multiple AI providers for autonomous portfolio management and real-time market analysis.**
+🚀 **Advanced AI-powered trading terminal with real-time market data and multi-AI analysis**
 
 ## ✨ Features
 
-### 🤖 **Multi-AI Support**
-- **OpenAI GPT-4/3.5** - Advanced reasoning and analysis
-- **Anthropic Claude** - Ethical and balanced decision making  
-- **Google Gemini** - Multimodal market insights
-- **Local LLM** - Privacy-focused offline analysis
-
-### 📊 **Dual Portfolio System**
-- **Human Portfolio** ($100,000) - Manual trading control
-- **AI Portfolio** ($50,000) - Autonomous AI management
-- **Real-time comparison** - Human vs AI performance
-
-### ⚡ **Live Market Data**
-- **Real-time prices** from Yahoo Finance API
+### 📊 **Live Market Data**
+- **Real-time stock prices** via Yahoo Finance API
+- **Auto-update every 30 seconds** during market hours
 - **Technical indicators** (RSI, Volume, Price changes)
-- **8 Top stocks** (AAPL, GOOGL, MSFT, AMZN, TSLA, NVDA, META, NFLX)
-- **30-second updates** for instant market response
+- **Market status tracking** (Open/Closed)
 
-### 🧠 **AI Intelligence**
-- **Autonomous decision making** - Buy/Sell/Hold recommendations
-- **Risk management** - Automated stop-loss and position sizing
-- **Strategy selection** - Conservative/Aggressive/Balanced approaches
-- **Transparent thinking** - See AI reasoning in real-time
+![Live Market Data](screenshots/quantumtrader_live_data.png)
 
-## 🖼️ Screenshots
+### 💼 **Portfolio Management**
+- **Human Portfolio** - Manual trading interface
+- **Real-time P&L calculation**
+- **Position tracking** with live valuations
+- **Trade history** and performance metrics
 
-### Main Trading Interface
-![QuantumTrader AI Interface](screenshots/main-interface.png)
+### 🤖 **Multi-AI Architecture**
+- **AI Bot Portfolio** (requires OpenAI API key)
+- **Intelligent trade analysis**
+- **Risk management algorithms**
+- **Automated decision making**
 
-### AI Analysis Dashboard  
-![AI Analysis](screenshots/ai-analysis.png)
+### 🎨 **Professional Interface**
+- **Responsive design** for desktop and mobile
+- **Real-time updates** with smooth animations
+- **Dark theme** with cyberpunk aesthetics
+- **Interactive trading forms**
 
-### Portfolio Management
-![Portfolio View](screenshots/portfolio-view.png)
+![Main Interface](screenshots/quantumtrader_main_interface.png)
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.11+
-- OpenAI API key (for AI analysis)
-- Internet connection (for live data)
+- Python 3.8+
+- pip package manager
 
 ### Installation
 
+1. **Clone the repository**
 ```bash
-# Clone the repository
 git clone https://github.com/kolerto99/quantumtrader-ai.git
 cd quantumtrader-ai
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up environment variables
-export OPENAI_API_KEY="your_openai_api_key_here"
-
-# Run the application
-python src/ai_trading_terminal.py
 ```
 
-### Access the Terminal
-Open your browser and navigate to: `http://localhost:7000`
+2. **Create virtual environment**
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Configure environment (optional)**
+```bash
+cp .env.example .env
+# Edit .env file to add your OpenAI API key for AI features
+```
+
+5. **Run the application**
+```bash
+cd src
+python ai_trading_terminal.py
+```
+
+6. **Access the interface**
+Open your browser and navigate to: `http://localhost:8000`
+
+## 📊 Market Data
+
+### Data Sources
+- **Yahoo Finance API** via yfinance library
+- **Real-time updates** every 30 seconds
+- **Historical data** for technical analysis
+- **Volume and price change calculations**
+
+### Supported Stocks
+- AAPL (Apple Inc.)
+- GOOGL (Alphabet Inc.)
+- MSFT (Microsoft Corporation)
+- AMZN (Amazon.com Inc.)
+- TSLA (Tesla Inc.)
+- NVDA (NVIDIA Corporation)
+- META (Meta Platforms Inc.)
+- NFLX (Netflix Inc.)
+
+### Market Hours
+- **Regular Trading**: Monday-Friday, 9:30 AM - 4:00 PM EST
+- **Data Updates**: Only during market hours
+- **Demo Mode**: When markets are closed
 
 ## 🔧 Configuration
 
-### Adding AI Providers
+### Environment Variables
+Create a `.env` file in the root directory:
 
-**Anthropic Claude:**
+```env
+# OpenAI API Configuration (optional)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Market Data Configuration
+UPDATE_INTERVAL=30  # seconds
+DEFAULT_SYMBOLS=AAPL,GOOGL,MSFT,AMZN,TSLA,NVDA,META,NFLX
+
+# Server Configuration
+HOST=0.0.0.0
+PORT=8000
+DEBUG=False
+```
+
+## 🤖 AI Features
+
+### AI Trading Bot (Premium)
+- **Requires OpenAI API key**
+- **Intelligent market analysis**
+- **Automated trading decisions**
+- **Risk management**
+- **Performance optimization**
+
+### Manual Trading
+- **Buy/Sell interface**
+- **Real-time price updates**
+- **Position management**
+- **Portfolio tracking**
+
+## 📈 Technical Analysis
+
+### Indicators
+- **RSI (Relative Strength Index)**
+- **Price change calculations**
+- **Volume analysis**
+- **Moving averages** (planned)
+
+### Data Processing
+- **Real-time calculations**
+- **Historical data analysis**
+- **Trend identification**
+- **Signal generation**
+
+## 🛠️ Development
+
+### Project Structure
+```
+quantumtrader-ai/
+├── src/
+│   └── ai_trading_terminal.py    # Main application
+├── screenshots/                  # Interface screenshots
+├── requirements.txt             # Python dependencies
+├── .env.example                # Environment template
+├── README.md                   # This file
+├── LICENSE                     # MIT License
+└── DEPLOYMENT.md              # Deployment guide
+```
+
+### Dependencies
+- **Flask** - Web framework
+- **yfinance** - Market data API
+- **pandas** - Data processing
+- **numpy** - Numerical computations
+- **openai** - AI integration (optional)
+
+### API Endpoints
+- `GET /` - Main interface
+- `GET /api/market-data` - Live market data
+- `GET /api/portfolio` - Portfolio information
+- `POST /api/trade` - Execute trades
+- `GET /api/status` - System status
+
+## 🚀 Deployment
+
+### Local Development
 ```bash
-export ANTHROPIC_API_KEY="your_claude_api_key"
+python src/ai_trading_terminal.py
 ```
 
-**Google Gemini:**
+### Production Deployment
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
+### Docker (Coming Soon)
 ```bash
-export GOOGLE_API_KEY="your_gemini_api_key"
+docker build -t quantumtrader-ai .
+docker run -p 8000:8000 quantumtrader-ai
 ```
 
-**Local LLM (Ollama):**
-```bash
-# Install Ollama
-curl -fsSL https://ollama.ai/install.sh | sh
+## 📊 Performance
 
-# Download models
-ollama pull llama2
-ollama pull llama3
-ollama pull mistral
-ollama pull deepseek-coder
-ollama pull deepseek-chat
-ollama pull qwen
-ollama pull codellama
-```
+### Real-time Updates
+- **30-second intervals** during market hours
+- **Efficient data caching**
+- **Minimal API calls**
+- **Responsive interface**
 
-## 📈 How It Works
+### Scalability
+- **Multi-threaded architecture**
+- **Asynchronous data processing**
+- **Optimized database queries**
+- **CDN-ready static assets**
 
-### 1. **Market Analysis**
-- Fetches real-time data every 30 seconds
-- Calculates technical indicators (RSI, price changes)
-- Analyzes market sentiment and trends
+## 🔒 Security
 
-### 2. **AI Decision Making**
-```python
-# AI analyzes market conditions
-market_sentiment = analyze_market_data()
+### Data Protection
+- **No sensitive data storage**
+- **Secure API key handling**
+- **HTTPS ready**
+- **Input validation**
 
-# Makes autonomous trading decisions
-if market_sentiment == "bullish":
-    action = "BUY"
-    reasoning = "Strong upward momentum detected"
-elif market_sentiment == "bearish":
-    action = "SELL" 
-    reasoning = "Market downturn, reducing exposure"
-```
-
-### 3. **Risk Management**
-- Maximum 20% of portfolio per trade
-- Automatic stop-loss implementation
-- Diversification across multiple assets
-- Real-time P&L tracking
-
-## 🎯 Trading Strategies
-
-### Conservative Strategy
-- Low-risk trades with stable stocks
-- Quick profit-taking
-- Minimal position sizes
-
-### Aggressive Strategy  
-- High-risk, high-reward trades
-- Volatile stock targeting
-- Larger position sizes
-
-### Balanced Strategy
-- Mix of conservative and aggressive approaches
-- Adaptive risk management
-- Market condition responsive
-
-## 📊 Performance Tracking
-
-- **Real-time portfolio valuation**
-- **P&L calculations** with live price updates
-- **Trade history** with timestamps and reasoning
-- **AI vs Human** performance comparison
-- **Risk metrics** and exposure analysis
-
-## 🛡️ Security & Privacy
-
-- **Virtual trading** - No real money at risk
-- **Local execution** - Your data stays private
-- **API key protection** - Secure credential management
-- **No personal data** collection
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](docs/CONTRIBUTING.md) for details.
-
-### Development Setup
-```bash
-# Fork the repository
-git clone https://github.com/your-username/quantumtrader-ai.git
-
-# Create a feature branch
-git checkout -b feature/amazing-feature
-
-# Make your changes and commit
-git commit -m "Add amazing feature"
-
-# Push to your fork and create a Pull Request
-git push origin feature/amazing-feature
-```
-
-## 📚 Documentation
-
-- [Installation Guide](docs/installation.md)
-- [API Reference](docs/api-reference.md)
-- [Trading Strategies](docs/strategies.md)
-- [Troubleshooting](docs/troubleshooting.md)
-
-## 🔮 Roadmap
-
-- [ ] **Options trading** support
-- [ ] **Crypto markets** integration
-- [ ] **Advanced charting** with TradingView
-- [ ] **Mobile app** development
-- [ ] **Social trading** features
-- [ ] **Backtesting** engine
-
-## ⚠️ Disclaimer
-
-**This software is for educational and simulation purposes only. It does not constitute financial advice. Always consult with qualified financial advisors before making real investment decisions.**
+### Privacy
+- **No user tracking**
+- **Local data processing**
+- **Optional cloud features**
+- **GDPR compliant**
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## 🤝 Contributing
 
-- **Yahoo Finance** for real-time market data
-- **OpenAI** for GPT models
-- **Anthropic** for Claude AI
-- **Google** for Gemini AI
-- **Meta** for Llama models
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/kolerto99/quantumtrader-ai/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/kolerto99/quantumtrader-ai/discussions)
-- **Developer**: [@kolerto99](https://github.com/kolerto99)
-- **Twitter**: [@Iuvnriki](https://x.com/Iuvnriki)
+- **Email**: support@quantumtrader.ai
+
+## 🎯 Roadmap
+
+### Version 2.0 (Planned)
+- [ ] **Advanced AI models**
+- [ ] **More technical indicators**
+- [ ] **Cryptocurrency support**
+- [ ] **Mobile app**
+- [ ] **Social trading features**
+
+### Version 1.1 (Current)
+- [x] **Live market data**
+- [x] **Real-time updates**
+- [x] **Portfolio management**
+- [x] **Responsive design**
+- [x] **Technical indicators**
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kolerto99/quantumtrader-ai&type=Date)](https://star-history.com/#kolerto99/quantumtrader-ai&Date)
 
 ---
 
-**⭐ Star this repository if you find it useful!**
+**Made with ❤️ by the QuantumTrader AI Team**
 
-**🚀 Built with ❤️ by [@kolerto99](https://github.com/kolerto99) | Follow on Twitter: [@Iuvnriki](https://x.com/Iuvnriki)**
-
+*Disclaimer: This software is for educational and research purposes only. Trading involves risk and you should carefully consider your investment objectives, level of experience, and risk appetite.*
